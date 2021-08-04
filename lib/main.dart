@@ -1,7 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'home.dart';
+
 /* import 'package:firebase_core/firebase_core.dart';
 import 'home.dart'; */
 
@@ -11,17 +11,19 @@ import 'home.dart'; */
   await Firebase.initializeApp();
   
   Firestore.instance
-      .collection("usuarios")
-      .document("001")
-      .setData({"Nome": "Jamilton"});
+    .collection("usuarios")
+    .document("001")
+    .setData({"Nome": "Jamilton"}
+  );
 
-  /* runApp(MaterialApp(
+  runApp(MaterialApp(
     home: Home(),
     debugShowCheckedModeBanner: false,
-  )); */
+  ));
 }
 
-class Firestore {
+mixin Firestore {
+  static var instance;
 }
 
 /* 
