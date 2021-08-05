@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
+import 'package:treino_em_video/login.dart';
 
-/* import 'package:firebase_core/firebase_core.dart';
-import 'home.dart'; */
-
- void main() {
+void main() {
   runApp(MaterialApp(
     home: Login(),
-    debugShowCheckedModeBanner: false,
-  ));
+    theme: ThemeData(
+      primaryColor: Color(0xff075E54), 
+      accentColor: Color(0xff25D366)
+    )
+  )
+  );
 }
+
